@@ -9,7 +9,7 @@ class BlogController extends Controller
 {
     public function index()
     {
-        $posts = Post::all();
+        $posts = Post::with('author')->orderBy('created_at', 'desc')->paginate(5);
         return view('blog.index', compact('posts'));
     }
 }

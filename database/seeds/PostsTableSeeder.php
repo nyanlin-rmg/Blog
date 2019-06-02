@@ -28,8 +28,8 @@ class PostsTableSeeder extends Seeder
                 'body' => $faker->paragraphs(rand(10, 15), true),
                 'slug' => $faker->slug(),
                 'image' => $image ? : $image = NULL,
-                'created_at' => $date,
-                'updated_at' => $date
+                'created_at' => now(),
+                'updated_at' => now()
             ];
         }
         DB::table('posts')->insert($posts);
