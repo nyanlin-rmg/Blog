@@ -8,13 +8,13 @@
                 @if($post->image_url)
                         <div class="post-item-image">
                             <a href="post.html">
-                                <img src="{{ $post->image_url }}" alt="">
+                                <img src="{{ $post->image_url }}" alt="{{ $post->title }}">
                             </a>
                         </div>
                     @endif
                     <div class="post-item-body">
                         <div class="padding-10">
-                            <h2><a href="{{ route('blog.show', $post) }}">{{ $post->title }}</a></h2>
+                            <h2><a href="{{ route('blog.show', $post->slug) }}">{{ $post->title }}</a></h2>
                             <p>{{ $post->excerpt }}</p>
                         </div>
 

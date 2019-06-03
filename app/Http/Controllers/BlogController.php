@@ -15,6 +15,9 @@ class BlogController extends Controller
 
     public function show(Post $post)
     {
+        if($post->published == false) {
+            abort(404);
+        }
         return view('blog.show', compact('post'));
     }
 }

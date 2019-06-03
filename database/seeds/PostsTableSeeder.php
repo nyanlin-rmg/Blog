@@ -34,7 +34,7 @@ class PostsTableSeeder extends Seeder
                 'image' => $image ? : $image = NULL,
                 'created_at' => now(),
                 'updated_at' => now(),
-                'published_at' => rand(1, 0) == 0 ? NULL : $date->addDays($i, rand(4,10))
+                'published' => rand(true, false)
             ];
         }
         DB::table('posts')->insert($posts);
