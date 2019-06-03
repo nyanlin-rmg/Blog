@@ -12,4 +12,9 @@ class BlogController extends Controller
         $posts = Post::with('author')->orderBy('created_at', 'desc')->paginate(5);
         return view('blog.index', compact('posts'));
     }
+
+    public function show(Post $post)
+    {
+        return view('blog.show', compact('post'));
+    }
 }
