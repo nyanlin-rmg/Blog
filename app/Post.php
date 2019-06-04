@@ -2,6 +2,7 @@
 
 namespace App;
 
+use GrahamCampbell\Markdown\Facades\Markdown;
 use Illuminate\Database\Eloquent\Model;
 
 class Post extends Model
@@ -26,5 +27,15 @@ class Post extends Model
     public function getCreatedDateAttribute()
     {
         return $this->created_at->diffForHumans();
+    }
+
+    public function getBodyHtmlAttribute($value)
+    {
+        return Markdown::convertToHtml($this->body);
+    }
+
+    public function getExcerptHtmlAttribute($value)
+    {
+        return Markdown::convertToHtml($this->excerpt);
     }
 }
