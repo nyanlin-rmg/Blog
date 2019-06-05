@@ -12,6 +12,11 @@ class Post extends Model
         return $this->belongsTo('App\User');
     }
 
+    public function category()
+    {
+        return $this->belongsTo('App\Category');
+    }
+
     public function getImageUrlAttribute()
     {
         $imageUrl = "";
