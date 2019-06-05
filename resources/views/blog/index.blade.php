@@ -3,6 +3,14 @@
 <div class="container">
     <div class="row">
         <div class="col-md-8">
+        @if(!($posts->count()))
+            <div class="alert alert-info">
+                Nothing To Show On This Category
+            </div>
+        @else
+            @if(isset($category))
+                <div class="alert">Category->{{ $category->title }}</div>
+            @endif
             @foreach ($posts as $post)
                 <article class="post-item">
                 @if($post->image_url)
@@ -23,7 +31,7 @@
                                 <ul class="post-meta-group">
                                     <li><i class="fa fa-user"></i><a href="#"> {{ $post->author->name }}</a></li>
                                     <li><i class="fa fa-clock-o"></i><time>{{ $post->created_date }}</time></li>
-                                    <li><i class="fa fa-tags"></i><a href="#"> Blog</a></li>
+                                    <li><i class="fa fa-tags"></i><a href="{{ route('category', $post->category) }}"> {{ $post->category->title }}</a></li>
                                     <li><i class="fa fa-comments"></i><a href="#">4 Comments</a></li>
                                 </ul>
                             </div>
@@ -34,6 +42,7 @@
                     </div>
                 </article>                
             @endforeach
+        @endif
 
             <nav>
                 <ul class="pager">
