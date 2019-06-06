@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Post;
 use App\Category;
+use App\User;
 
 class BlogController extends Controller
 {
@@ -39,6 +40,17 @@ class BlogController extends Controller
                             ->paginate(5);
 
         return view('blog.index', compact('posts', 'categories', 'category'));
+    }
+
+    public function author(User $author)
+    {
+        $categories = $this->getCategories();
+        $posts = $author->posts()
+                            ->with('category')
+                            ->where('published', true)
+                            ->paginate(5);
+
+        return view('blog.index', compact('posts', 'categories', 'author'));
     }
 
     private function getCategories()

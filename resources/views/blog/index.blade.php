@@ -9,7 +9,10 @@
             </div>
         @else
             @if(isset($category))
-                <div class="alert">Category->{{ $category->title }}</div>
+                <div class="alert alert-info">Category->{{ $category->title }}</div>
+            @endif
+            @if(isset($author))
+                <div class="alert">Author->{{ $author->name }}</div>
             @endif
             @foreach ($posts as $post)
                 <article class="post-item">
@@ -29,7 +32,7 @@
                         <div class="post-meta padding-10 clearfix">
                             <div class="pull-left">
                                 <ul class="post-meta-group">
-                                    <li><i class="fa fa-user"></i><a href="#"> {{ $post->author->name }}</a></li>
+                                    <li><i class="fa fa-user"></i><a href="{{ route('author', $post->author->slug) }}"> {{ $post->author->name }}</a></li>
                                     <li><i class="fa fa-clock-o"></i><time>{{ $post->created_date }}</time></li>
                                     <li><i class="fa fa-tags"></i><a href="{{ route('category', $post->category) }}"> {{ $post->category->title }}</a></li>
                                     <li><i class="fa fa-comments"></i><a href="#">4 Comments</a></li>
