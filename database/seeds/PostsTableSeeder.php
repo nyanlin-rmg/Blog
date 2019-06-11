@@ -34,7 +34,8 @@ class PostsTableSeeder extends Seeder
                 'image' => $image ? : $image = NULL,
                 'created_at' => now(),
                 'updated_at' => now(),
-                'published' => rand(true, false)
+                'published' => rand(true, false),
+                'view_count' => rand(1, 10) * 100
             ];
         }
         DB::table('posts')->insert($posts);
