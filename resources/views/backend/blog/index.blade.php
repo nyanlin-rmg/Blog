@@ -25,6 +25,7 @@
                                         <th>Title</th>
                                         <th>Author</th>
                                         <th>Category</th>
+                                        <th>Published</th>
                                         <th>Date</th>
                                         <th>Action</th>
                                     </tr>
@@ -35,7 +36,16 @@
                                             <td>{{ $post->title }}</td>
                                             <td>{{ $post->author->name }}</td>
                                             <td>{{ $post->category->title }}</td>
-                                            <td>{{ $post->created_at }}</td>
+                                            <td>
+                                                @if($post->published == true)
+                                                    <i class="fa fa-check" style="color: green"></i>
+                                                @else
+                                                    <i class="fa fa-minus"></i>
+                                                @endif
+                                            </td>
+                                            <td>
+                                                <abbr title="{{ $post->dateFormatted() }}">{{ $post->dateFormatted() }}</abbr>
+                                            </td>
                                             <td>
                                                 <a href="#" class="btn btn-xs btn-default">
                                                     <i class="fa fa-edit"></i>
@@ -54,7 +64,7 @@
                                 {{ $posts->links() }}
                             </div>
                             <div class="pull-right">
-                                <small>4 items</small>
+                                <small>{{ $posts->count() }} items</small>
                             </div>
                         </div>
                     </div>

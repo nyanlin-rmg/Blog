@@ -29,6 +29,15 @@ class Post extends Model
         return $imageUrl;
     }
 
+    public function dateFormatted($showTime = false)
+    {
+        $format = "d/m/Y";
+        if ($showTime) {
+            $format = $format . "H:i:s";
+        }
+        return $this->created_at->format($format);
+    }
+
     public function getCreatedDateAttribute()
     {
         return $this->created_at->diffForHumans();
