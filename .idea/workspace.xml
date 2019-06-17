@@ -2,16 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="71b6fd3d-e856-41cc-b929-44aa4d0eeca6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/LaravelForum.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/LaravelForum.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Backend/BlogController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Backend/BlogController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Post.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Post.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/backend/blog/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/blog/create.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/backend/blog/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/backend/blog/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/backend/main.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/backend/main.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -44,8 +38,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Post.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="208">
-              <caret line="9" column="28" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
+            <state relative-caret-position="536">
+              <caret line="51" lean-forward="true" selection-start-line="51" selection-end-line="51" />
               <folding>
                 <element signature="e#23#68#0#PHP" expanded="true" />
               </folding>
@@ -53,20 +47,23 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Backend/BlogController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="468">
-              <caret line="20" column="56" selection-start-line="20" selection-start-column="56" selection-end-line="20" selection-end-column="56" />
+            <state relative-caret-position="276">
+              <caret line="49" column="69" selection-start-line="49" selection-start-column="69" selection-end-line="49" selection-end-column="69" />
+              <folding>
+                <element signature="e#48#65#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/backend/blog/create.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="81">
-              <caret line="27" column="36" selection-start-line="27" selection-start-column="36" selection-end-line="27" selection-end-column="36" />
+            <state relative-caret-position="510">
+              <caret line="60" column="98" selection-start-line="60" selection-start-column="98" selection-end-line="60" selection-end-column="98" />
             </state>
           </provider>
         </entry>
@@ -74,8 +71,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/backend/blog/index.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="78">
-              <caret line="3" selection-start-line="3" selection-end-line="3" />
+            <state relative-caret-position="364">
+              <caret line="32" column="56" selection-start-line="32" selection-start-column="56" selection-end-line="32" selection-end-column="56" />
             </state>
           </provider>
         </entry>
@@ -88,12 +85,12 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/Post.php" />
-        <option value="$PROJECT_DIR$/resources/views/backend/blog/index.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/layouts/backend/main.blade.php" />
         <option value="$PROJECT_DIR$/config/app.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Backend/BlogController.php" />
         <option value="$PROJECT_DIR$/resources/views/backend/blog/create.blade.php" />
+        <option value="$PROJECT_DIR$/app/Post.php" />
+        <option value="$PROJECT_DIR$/resources/views/backend/blog/index.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/Backend/BlogController.php" />
       </list>
     </option>
   </component>
@@ -292,12 +289,12 @@
       <workItem from="1560445102575" duration="764000" />
       <workItem from="1560446128291" duration="119000" />
       <workItem from="1560446769382" duration="2473000" />
-      <workItem from="1560788555942" duration="128000" />
+      <workItem from="1560788555942" duration="6387000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7565000" />
+    <option name="totallyTimeSpent" value="13824000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="1366" height="694" extended-state="6" />
@@ -363,34 +360,44 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2019_05_31_174852_create_posts_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="17" column="38" selection-start-line="17" selection-start-column="29" selection-end-line="17" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/backend/blog/create.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="60" column="98" selection-start-line="60" selection-start-column="98" selection-end-line="60" selection-end-column="98" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/Post.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="9" column="28" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
+        <state relative-caret-position="536">
+          <caret line="51" lean-forward="true" selection-start-line="51" selection-end-line="51" />
           <folding>
             <element signature="e#23#68#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Backend/BlogController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
-          <caret line="20" column="56" selection-start-line="20" selection-start-column="56" selection-end-line="20" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/backend/blog/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="78">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        <state relative-caret-position="364">
+          <caret line="32" column="56" selection-start-line="32" selection-start-column="56" selection-end-line="32" selection-end-column="56" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/backend/blog/create.blade.php">
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Backend/BlogController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="81">
-          <caret line="27" column="36" selection-start-line="27" selection-start-column="36" selection-end-line="27" selection-end-column="36" />
+        <state relative-caret-position="276">
+          <caret line="49" column="69" selection-start-line="49" selection-start-column="69" selection-end-line="49" selection-end-column="69" />
+          <folding>
+            <element signature="e#48#65#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

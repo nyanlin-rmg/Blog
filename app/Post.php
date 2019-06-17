@@ -7,6 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Post extends Model
 {
+    public $fillable = ['author_id', 'title', 'slug', 'excerpt', 'body', 'category_id', 'published', 'view_count'];
+
     public function author()
     {
         return $this->belongsTo('App\User');

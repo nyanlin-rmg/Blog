@@ -28,6 +28,11 @@
                             <a href="{{ route('backend.blog.create') }}" class="btn btn-success">Add New Post</a>
                         </div>
                         <div class="box-body ">
+                            @if(session('message'))
+                                <div class="alert alert-success">
+                                    {{ session('message') }}
+                                </div>
+                            @endif
                             @if(!$posts->count())
                                 <div class="alert alert-danger">
                                     No Post Found

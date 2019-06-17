@@ -25,7 +25,50 @@
                 <div class="col-xs-12">
                     <div class="box">
                         <div class="box-body ">
-                            {!! Form::model($post, ['route' => 'backend.blog.store']) !!}
+                            {!! Form::model($post, ['route' => 'backend.blog.store', 'method' => 'POST']) !!}
+                                <div class="form-group {{ $errors->has('title') ? 'has-error' : '' }}">
+                                    {!! Form::label('title') !!}
+                                    {!! Form::text('title', null, ['class' => 'form-control', 'placeholder' => 'Title']) !!}
+                                    @if($errors->has('title'))
+                                        <span class="help-block"><i>{{ $errors->first('title') }}</i></span>
+                                    @endif
+                                </div>
+                                <div class="form-group {{ $errors->has('slug') ? 'has-error' : '' }}">
+                                    {!! Form::label('slug') !!}
+                                    {!! Form::text('slug', null, ['class' => 'form-control']) !!}
+                                    @if($errors->has('slug'))
+                                        <span class="help-block"><i>{{ $errors->first('slug') }}</i></span>
+                                    @endif
+                                </div>
+                                <div class="form-group {{ $errors->has('excerpt') ? 'has-error' : '' }}">
+                                    {!! Form::label('excerpt') !!}
+                                    {!! Form::textarea('excerpt', null, ['class' => 'form-control']) !!}
+                                    @if($errors->has('excerpt'))
+                                        <span class="help-block"><i>{{ $errors->first('excerpt') }}</i></span>
+                                    @endif
+                                </div>
+                                <div class="form-group {{ $errors->has('body') ? 'has-error' : '' }}">
+                                    {!! Form::label('body') !!}
+                                    {!! Form::textarea('body', null, ['class' => 'form-control']) !!}
+                                    @if($errors->has('body'))
+                                        <span class="help-block"><i>{{ $errors->first('body') }}</i></span>
+                                    @endif
+                                </div>
+                                <div class="form-group {{ $errors->has('category_id') ? 'has-error' : '' }}">
+                                    {!! Form::label('body') !!}
+                                    {!! Form::select('category_id', $categories->pluck('title', 'id'), null, ['class' => 'form-control', 'placeholder' => 'Choose Category']) !!}
+                                    @if($errors->has('category_id'))
+                                        <span class="help-block"><i>{{ $errors->first('category_id') }}</i></span>
+                                    @endif
+                                </div>
+                                <div class="form-group">
+                                    {!! Form::label('Published') !!}
+                                    {!! Form::checkbox('published', 1); !!}
+                                </div>
+                                <div>
+                                    {{ Form::submit('Add New Post', ['class' => 'btn btn-primary']) }}
+                                </div>
+                            {!! Form::close() !!}
                         </div>
                         <div class="box-footer clearfix">
                         </div>
