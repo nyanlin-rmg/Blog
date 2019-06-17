@@ -11,12 +11,13 @@ class BlogController extends BackendController
     public function index()
     {
         $posts = Post::paginate(5);
+        $postCount = Post::count();
 
-        return view('backend.blog.index', compact('posts'));
+        return view('backend.blog.index', compact('posts', 'postCount'));
     }
 
-    public function create()
+    public function create(Post $post)
     {
-        dd("Create Route Works");
+        return view('backend.blog.create', compact('post'));
     }
 }
