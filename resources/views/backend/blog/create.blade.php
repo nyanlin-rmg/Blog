@@ -25,7 +25,7 @@
                 <div class="col-xs-12">
                     <div class="box">
                         <div class="box-body ">
-                            {!! Form::model($post, ['route' => 'backend.blog.store', 'method' => 'POST']) !!}
+                            {!! Form::model($post, ['route' => 'backend.blog.store', 'method' => 'POST', 'files' => TRUE]) !!}
                                 <div class="form-group {{ $errors->has('title') ? 'has-error' : '' }}">
                                     {!! Form::label('title') !!}
                                     {!! Form::text('title', null, ['class' => 'form-control', 'placeholder' => 'Title']) !!}
@@ -59,6 +59,12 @@
                                     {!! Form::select('category_id', $categories->pluck('title', 'id'), null, ['class' => 'form-control', 'placeholder' => 'Choose Category']) !!}
                                     @if($errors->has('category_id'))
                                         <span class="help-block"><i>{{ $errors->first('category_id') }}</i></span>
+                                    @endif
+                                </div>
+                                <div class="form-group {{ $errors->has('image') ? 'has-error' : '' }}">
+                                    {!! Form::file('image') !!}
+                                    @if($errors->has('image'))
+                                        <span class="help-block"><i>{{ $errors->first('image') }}</i></span>
                                     @endif
                                 </div>
                                 <div class="form-group">
